@@ -90,6 +90,7 @@ function App() {
         onCreateRoom={handleCreateRoom}
         onStartGame={handleStartGame}
         myId={socket.id}
+        initialRoomCode={new URLSearchParams(window.location.search).get('room') || ''}
       />
     </div>
   )

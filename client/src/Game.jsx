@@ -16,10 +16,10 @@ export default function Game({ socket, roomCode, initialGameState }) {
       
       if (space.type === 'property' || space.type === 'station' || space.type === 'utility') {
         if (!ownerId) {
-          setModalAction({ type: 'buy', space, amount: space.price });
+          setModalAction({ type: 'buy', space, spaceId, price: space.price, amount: space.price });
         } else if (ownerId !== socket.id) {
           // simplified: rent is fixed base for now
-          setModalAction({ type: 'pay_rent', space, amount: space.rent || 25, ownerId });
+          setModalAction({ type: 'pay_rent', space, spaceId, amount: space.rent || 25, ownerId });
         } else {
           setModalAction({ type: 'end_turn', space: null });
         }
