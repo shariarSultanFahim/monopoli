@@ -28,7 +28,6 @@ export default function Lobby({ socket, roomData, onJoinRoom, onCreateRoom, onSt
               {window.location.origin}/?room={roomData.id}
           </div>
         </div>
-        </div>
 
         <div className="space-y-3 mb-8 w-full max-w-lg mx-auto">
           <h3 className="text-slate-300 uppercase text-xs font-bold tracking-wider">Players ({roomData.players.length}/6)</h3>
